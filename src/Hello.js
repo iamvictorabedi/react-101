@@ -2,13 +2,19 @@ import React, {Component} from 'react';
 
 class Hello extends Component{
     render(){
-        const {name, age, belt} = this.props.user;
+        const {students} = this.props;
+        const studentsList = students.map( student => {
+            return (
+                <div className='hello' key={student.id}>
+                <div>I am {student.name}</div>
+                <div>Aged: {student.age}</div>
+                <div>My belt color is {student.belt}</div>
+                </div>
+            )
+        })
         return (
-<div className='hello'>
-    <div>I am {name}</div>
-    <div>Aged: {age}</div>
-    <div>My belt color is {belt}</div>
-
+<div className="studentsList">
+    {studentsList}
 </div>
             )
     }

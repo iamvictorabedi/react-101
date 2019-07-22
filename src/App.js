@@ -2,28 +2,16 @@ import React, {Component} from 'react';
 import Hello from './Hello'
 class App extends Component {
   state = {
-   user: [
-     {
-    name: 'Sally',
-    age: 5,
-    belt: 'Black'
-  },
-  {
-    name: 'Kings',
-    age: 5,
-    belt: 'Yello'
-  },
-  {
-    name: 'Pedro',
-    age: 5,
-    belt: 'Pink'
-  }]
+   students: [
+     {name: 'Sally', age: 5, belt: 'Black', id: 1},
+     {name: 'Kings', age: 5, belt: 'Yello', id: 2},
+     {name: 'Pedro', age: 5, belt: 'Pink', id: 3}]
 }
 render(){
   return (
     <div className="App">
       <header className="App-header">
-        <Hello name="abedi" age='5' belt='black'/>
+        <Hello students={this.state.students} />
       </header>
     </div>
   );
