@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Hello from './Hello'
+import AddStudent from './AddStudent';
 class App extends Component {
   state = {
    students: [
@@ -19,11 +20,18 @@ class App extends Component {
     belt: 'Pink'
   }]
 }
+  plusStudent =(student) => { 
+    student.id = Math.random();
+  let students = [...this.state.students, student];
+  this.setState({
+  students: students
+  })}
 render(){
   return (
     <div className="App">
       <header className="App-header">
         <Hello students= {this.state.students}/>
+        <AddStudent plusStudent= {this.plusStudent}/>
       </header>
     </div>
   );
