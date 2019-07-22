@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Hello from './Hello'
 class App extends Component {
   state = {
-   user: [
+   students: [
      {
     name: 'Sally',
     age: 5,
@@ -23,7 +23,7 @@ render(){
   return (
     <div className="App">
       <header className="App-header">
-        <Hello name="abedi" age='5' belt='black'/>
+        <Hello students= {this.state.students}/>
       </header>
     </div>
   );
