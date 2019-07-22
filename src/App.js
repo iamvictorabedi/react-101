@@ -10,7 +10,7 @@ class App extends Component {
   },
   {
     name: 'Kings',
-    age: 5,
+    age: 30,
     belt: 'Yello'
   },
   {

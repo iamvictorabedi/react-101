@@ -3,20 +3,20 @@ import React from 'react';
 const Hello = ({students}) => {
     //{{}} descructuring 
     //functional components
-        const studentsList = students.map( student => {
-            return (
+        return (
+<div className="studentsList">
+    {
+        students.map( student => {
+           return student.age > 20? (
                 <div className='hello' key={student.id}>
                 <div>I am {student.name}</div>
                 <div>Aged: {student.age}</div>
                 <div>My belt color is {student.belt}</div>
                 </div>
-            )
+           ): null
         })
-        return (
-<div className="studentsList">
-    {studentsList}
-</div>
-            )
+    }
+    </div>)
     }
   
 export default Hello;
