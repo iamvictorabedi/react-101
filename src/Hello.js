@@ -1,6 +1,6 @@
 import React from 'react';
 //sample functional ui components
-const Hello = ({students}) => {
+const Hello = ({students, deleteStudent}) => {
     //{{}} descructuring 
     //functional components
         return (
@@ -12,6 +12,7 @@ const Hello = ({students}) => {
                 <div>I am {student.name}</div>
                 <div>Aged: {student.age}</div>
                 <div>My belt color is {student.belt}</div>
+                <button onClick={() =>{deleteStudent(student.id)}}>Delete Student</button>
                 </div>
            ): null
         })
